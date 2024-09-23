@@ -4,7 +4,7 @@ import { ShoppingBag } from "lucide-react";
 
 const PopularCard = () => {
     const {data:DashboardMetrics,isLoading} = useGetDashboardMetricsQuery();
-    console.log(DashboardMetrics?.popularProducts)
+    // console.log(DashboardMetrics?.popularProducts)
   return (
     <div className="row-span-3 xl:row-span-6 bg-white rounded-2xl pb-16 shadow-md">
         {isLoading ? (

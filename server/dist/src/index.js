@@ -10,6 +10,7 @@ const cors_1 = __importDefault(require("cors"));
 const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 const dashboardRoutes_1 = __importDefault(require("./routes/dashboardRoutes"));
+const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
@@ -24,3 +25,4 @@ app.listen(port, () => {
     console.log(`Server running at port ${port}`);
 });
 app.use("/dashboard", dashboardRoutes_1.default);
+app.use("/products", productRoutes_1.default);
