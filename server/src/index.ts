@@ -7,6 +7,7 @@ import morgan from "morgan"
 import dashboardRoutes from "./routes/dashboardRoutes"
 import productRoutes from "./routes/productRoutes"
 import userRoutes from "./routes/userRoutes"
+import expenseRoutes from "./routes/expenseRoutes"
 dotenv.config()
 const app = express()
 app.use(express.json())
@@ -26,4 +27,5 @@ app.listen(port,()=>{
 app.use("/dashboard", dashboardRoutes)
 app.use("/products", productRoutes)
 app.use("/users",userRoutes)
+app.use("/expenses",expenseRoutes)
 
