@@ -37,7 +37,7 @@ const Sidebar = () => {
   return (
     <div className={SidebarClassNames}>
         <div className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSideBarCollapsed ? "px-5" : "px-8"}`}>
-            {/* <div className="block"><Image src="/public/logo.png" alt="logo" width={20} height={20}/></div> */}
+            <Image src="https://inventory-managemet-s3.s3.ap-south-1.amazonaws.com/logo.png" alt="logo" width={27} height={27} className="rounded w-8"/>
             <h1 className={`${isSideBarCollapsed ? "hidden" : "block"} font-extrabold text-2xl`}>Inventora</h1>
             <button className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100" onClick={toggleSiderbar}>
                 <Menu className="w-4 h-4"/>

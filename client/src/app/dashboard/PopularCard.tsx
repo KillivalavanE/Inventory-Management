@@ -1,6 +1,7 @@
 import { useGetDashboardMetricsQuery } from "@/state/api"
 import { Rating } from "@mui/material";
 import { ShoppingBag } from "lucide-react";
+import Image from "next/image";
 
 const PopularCard = () => {
     const {data:DashboardMetrics,isLoading} = useGetDashboardMetricsQuery();
@@ -17,7 +18,7 @@ const PopularCard = () => {
                     {DashboardMetrics?.popularProducts.map((product)=>(
                         <div key={product.productId} className="flex items-center justify-between gap-3 px-5 py-7 border-b">
                             <div className="flex items-center gap-3">
-                                <div>img</div>
+                            <Image src={`https://inventory-managemet-s3.s3.ap-south-1.amazonaws.com/product${Math.floor(Math.random()*3)+1}.png`} alt="profile" width={48} height={48} className="rounded-lg w-14 h-14"/>
                                 <div className="flex flex-col justify-between gap-1">
                                     <div className="font-bold text-gray-900">{product.name}</div>
                                     <div className="flex text-sm items-center">
